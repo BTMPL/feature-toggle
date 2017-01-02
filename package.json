@@ -1,0 +1,29 @@
+{
+  "name": "feature-toggle",
+  "version": "1.0.0",
+  "description": "A simple library allowing you to hide code implementation behind a feature-toggle flag. Allows for nested features and callbacks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*-test.js"
+  },
+  "keywords": [
+    "javascript",
+    "feature",
+    "toggle",
+    "flag"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/btmpl/feature-toggle.git"
+  },
+  "homepage": "https://github.com/btmpl/feature-toggle",
+  "author": "Bartosz Szczecinski <baphemot@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
