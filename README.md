@@ -1,7 +1,7 @@
 ## USAGE
 
 ```js
-var featureToggle = require("feature-toggle");
+var featureToggle = require("simple-feature-toggle");
 
 featureToggle.set({
   root: {
