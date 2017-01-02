@@ -1,5 +1,5 @@
 {
-  "name": "feature-toggle",
+  "name": "simple-feature-toggle",
   "version": "1.0.0",
   "description": "A simple library allowing you to hide code implementation behind a feature-toggle flag. Allows for nested features and callbacks.",
   "main": "index.js",
