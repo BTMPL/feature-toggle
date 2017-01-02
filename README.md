@@ -28,7 +28,7 @@ featureToggle.set(Object flagset)
 Load or update an existing flag set. The value should be an object with each
 leaf being either a boolean or function that when evaluate returns a boolean.
 
-Calling the funciton multiple time will merge the flag set using [_.merge](https://lodash.com/docs#merge)
+Calling the function multiple time will merge the flag set using [_.merge](https://lodash.com/docs#merge)
 
 ```js
 featureToggle.reset()
@@ -70,13 +70,13 @@ featureToggle.resolveNested
 ```
 
 Decides if the app can query for whole flag objects as valid `isEnabled` and
-`isDisabled` response. This can be useful to lock/unlock a whole gorup of
+`isDisabled` response. This can be useful to lock/unlock a whole group of
 features and each individual one later on.
 
 ```js
 featureToggle.resolveNested()
 ```
 
-If `featureToggle.resolveNested` is enabled, deides on value to be returned when
+If `featureToggle.resolveNested` is enabled, decides on value to be returned when
 resolving with an object. Returns `featureToggle.assumeEnabledByDefault` by
 default.
