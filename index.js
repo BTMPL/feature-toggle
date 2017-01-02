@@ -24,7 +24,7 @@ const featureToggle = {
   },
 
   isDisabled: function(key) {
-    return !this.isEnabled(key)
+    return !this.isEnabled.apply(this, Object.values(arguments));
   },
 
   isEnabled: function(key) {

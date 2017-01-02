@@ -1,30 +1,34 @@
 const featureToggle = require('../index.js');
 const expect = require('chai').expect;
 
-describe("featureToggle", () => {
-  it("allows to set configuration", () => {
-    featureToggle.set({
-      root: {
-        child: {
-          flag1: false
-        }
-      }
-    });
+const merge = require('lodash/merge');
+const isEqual = require('lodash/isEqual');
 
-    expect(featureToggle.isDisabled('root.child.flag1')).to.equal(true);
-    expect(featureToggle.isDisabled('root.child.flag2')).to.equal(false);
+describe("featureToggle", () => {
+  const initialState = {
+    root: {
+      child: {
+        flag1: false
+      }
+    }
+  };
+
+  it("allows to set configuration", () => {
+    featureToggle.set(initialState);
+    expect(isEqual(featureToggle.data, initialState)).to.equal(true);
   });
 
   it("allows to update configuration", () => {
-    featureToggle.set({
+    let alteredState = {
       root: {
         child: {
           flag2: false
         }
       }
-    });
-    expect(featureToggle.isDisabled('root.child.flag1')).to.equal(true);
-    expect(featureToggle.isDisabled('root.child.flag2')).to.equal(true);
+    };
+    merge(alteredState, initialState);
+    featureToggle.set(alteredState);
+    expect(isEqual(featureToggle.data, alteredState)).to.equal(true);
   });
 
   it("marks not-defined features as active by default", () => {
